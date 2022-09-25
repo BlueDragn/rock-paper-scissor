@@ -1,7 +1,12 @@
-let playerSelection = prompt("Please enter your option", "rock");
-let playerSelection1 = playerSelection.toLowerCase();
-console.log(playerSelection);
+//Initializing Global variable
+let playerSelection = "";
 
+
+
+
+
+
+//Computer's Move
 function getComputerChoice(){
   let arrayInput = ["rock", "paper", "scissors"];
   let arraylength = arrayInput.length;
@@ -9,46 +14,101 @@ function getComputerChoice(){
   let computerSelection = arrayInput[x];
   return computerSelection;
 }
-const computerSelection1 = getComputerChoice();
+//const computerSelection1 = getComputerChoice();
 
-console.log(computerSelection1);
-
-
-
-function game(playerSelection1, computerSelection1) {
-  
+//console.log(computerSelection1);
 
 
-  if (playerSelection1 === computerSelection1){
-     console.log("Draw");
-  } else if (playerSelection1 ==="rock" && computerSelection1 === "paper"){
-      console.log("Computer Wins!");
+//Function For Game Play
+function game(playerChoice, computerChoice) {
+
+  let winner = "";
+  if (playerChoice === computerChoice){
+    winner = "Draw";
+
+  } else if (playerChoice ==="rock" && computerChoice === "paper"){
+    winner = "computer";
     
-  } else if (playerSelection1 === "paper" && computerSelection1 === "rock"){
-      console.log("You Wins!");
+  } else if (playerChoice === "paper" && computerChoice === "rock"){
+    winner = "player";
+
     
-  }else if (playerSelection1 === "paper" && computerSelection1 === "scissors"){
-      console.log("Computer Wins!");
-    
-  }else if (playerSelection1 === "scissors" && computerSelection1 === "paper"){
-      console.log("You Wins!");
-    
-  }else if (playerSelection1 === "rock" && computerSelection1 === "scissors"){
-      console.log("You Wins!");
-    
+  }else if (playerChoice === "paper" && computerChoice === "scissors"){
+      winner = "computer";
+
+
+  }else if (playerChoice === "scissors" && computerChoice === "paper"){
+    winner = "player";
+
+
+  }else if (playerChoice === "rock" && computerChoice === "scissors"){
+    winner = "player";
+
   }
-    else if (playerSelection1 === "scissors" && computerSelection1 === "rock"){
-      console.log("Computer Wins!");
+    else if (playerChoice === "scissors" && computerChoice === "rock"){
+      winner = "computer";
+
   
     }else {
     console.log("enter correct option");
   }
+  return winner;
+       }
+
+//Playing Round Function
+       function playround(){
+        let playerScore = 0;
+        let computerScore = 0;
+        let maxRound = 5;
+        let roundWinner;
+        let result = "";
+        for (let index = 0; index < maxRound; index++) {
+          //player Choice
+          playerSelection = prompt("Please enter your option", "rock");
+          let playerSelection1 = playerSelection.toLowerCase();
+          console.log( "yourChoice:" + playerSelection1);
+      
+          //Computer Choice
+          const computerSelection1 = getComputerChoice();
+          console.log("Machine:" + computerSelection1);
+      
+          //Function Call to decide winner
+          roundWinner = game(playerSelection1, computerSelection1);
+          console.log("Round winner is:" + roundWinner);
+          if(roundWinner == "computer")
+          {
+            computerScore++;
+            console.log("Computer Score is:" + computerScore);
+          }
+          else if(roundWinner == "player")
+          {
+            playerScore++;
+            console.log("player Score is: " + playerScore);
+          }
+          
+        }
+        if(playerScore > computerScore)
+        {
+          //console.log("YouWins!");
+          result = "player Wins!";
+        }
+        else if(playerScore < computerScore){
+          //console.log("ComputerWins!");
+        result = "Computer Wins!";
+          
+        }else{
+          
+
+          result = "It is a Draw";
+        }
+        return result;
+
+      }
       
 
-  }
 
-var game1 = game(playerSelection1, computerSelection1);
-console.log(game1);
+      playround();
+
 
 
 
