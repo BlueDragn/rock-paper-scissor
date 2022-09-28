@@ -150,7 +150,7 @@ width: 500px;
 height: 410px;
 left: 700px;
 top: 262px;
-background-color: #9D1634;
+
 
 
 }
@@ -160,58 +160,179 @@ margin-top: 18%;
 margin-left: 17%;
 margin-right: 15%;
 
-padding-bottom: 20px; 
+padding-bottom: 20px;
 
 
 
 mix-blend-mode: normal;
 }
 
+
+/* Rock  section Begins*/
+
 .rock-container{
+  background-color:#DB2E4D;
+  width:200px;
+  height:200px;
 
- background-color: aqua;
- border: 5px solid black;
- position: absolute;
- bottom: 10px;
- left: 210px;
+  /* border properties*/
+  border-radius:50%;
+
+  /*Box Shadow Property */
+  box-shadow: 0px 15px 7px  #9D1634;
+
+  /* Positioning*/
+  position:absolute;
+  top:280px;
+  left:150px;
+
+  display:flex;
+  align-items: center;
+  justify-content: center;
 
 
 
-
+  
 }
+
+
 .rock{
-background-color: rgb(35, 154, 35);
-width: 50%;
+  background-color: #F3F3F3;
+  width:150px;
+  height:150px;
+
+
+  /* Shadow Property */
+  box-shadow: inset -10px 15px 3px  #BABFD4;
+
+
+   /* border properties*/
+  border-radius:50%;
+
+  display:flex;
+  align-items: center;
+  justify-content: center;
+
+
+
+  
 }
+/* Rock  section ends*/
+
+
+
+/* Paper Section Begins */
 
 .paper-container{
 
-  background-color: aqua;
-  border: 5px solid black;
-  position: absolute;
-  left: 60px;
-  top: 60px;
+
+    background-color:#4664F4;
+    width:200px;
+    height:200px;
+
+    /* border properties*/
+    border-radius:50%;
+
+    /*Box Shadow Property */
+    box-shadow: 0px 15px 7px #2A45C2;
+
+    /* Positioning*/
+    position:absolute;
+    top:0px;
+    left:0px;
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
 
 }
 .paper{
 
-  background-color: rgb(35, 154, 35);
-  width: 50%;
+  background-color: #F3F3F3;
+  width:150px;
+  height:150px;
+
+
+  /* Shadow Property */
+  box-shadow: inset -10px 15px 3px  #BABFD4;
+
+
+   /* border properties*/
+  border-radius:50%;
+
+  display:flex;
+  align-items: center;
+  justify-content: center;
+
 
 }
 
+/* Scissors section begins*/
+
 .scissors-container{
 
-  background-color: aqua;
-  border: 5px solid black;
-  position: absolute;
-  right: 60px;
-  top: 60px;
+  background-color:#EB9F0E;
+    width:200px;
+    height:200px;
+
+    /* border properties*/
+    border-radius:50%;
+
+    /*Box Shadow Property */
+    box-shadow: 0px 15px 7px #C76C1B;
+
+    /* Positioning*/
+    position:absolute;
+    top:0px;
+    right:0px;
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .scissors{
 
 
-  background-color: rgb(35, 154, 35);
-  width: 50%;
+  background-color: #F3F3F3;
+  width:150px;
+  height:150px;
+
+
+  /* Shadow Property */
+  box-shadow: inset -10px 15px 3px  #BABFD4;
+
+
+   /* border properties*/
+  border-radius:50%;
+
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*RULES SECTION */
+
+.container-3{
+
+
+  position: absolute;
+ width: 128px;
+ height: 40px;
+ left: 1200px;
+ top: 650px;
+
+  border: 3px solid rgba(255, 255, 255, 0.289199);
+  border-radius: 10px;
+
+  display:flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+.container-3 > p{
+  color: #ffffff;
+  text-align: center;
 }
