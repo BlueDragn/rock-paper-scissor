@@ -217,6 +217,22 @@ mix-blend-mode: normal;
 
   
 }
+.rock-container:hover + .hide {
+  display: block;
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  left: 100px;
+  top: 235px;
+
+  background: #FFFFFF;
+  mix-blend-mode: normal;
+  opacity: 0.05;
+    border-radius:50%;
+    cursor: pointer;
+
+}
+
 /* Rock  section ends*/
 
 
@@ -266,6 +282,26 @@ mix-blend-mode: normal;
 
 
 }
+.hide{
+  display: none;
+}
+.paper-container:hover + .hide {
+  display: block;
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  left: -55px;
+  top: -40px;
+
+  background: #FFFFFF;
+  mix-blend-mode: normal;
+  opacity: 0.05;
+  border-radius:50%;
+  cursor: pointer;
+ 
+
+}
+
 
 /* Scissors section begins*/
 
@@ -310,6 +346,23 @@ mix-blend-mode: normal;
   align-items: center;
   justify-content: center;
 }
+/*hoover effect */
+.scissors-container:hover + .hide {
+  display: block;
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  left: 252px;
+  top: -44px;
+
+  background: #FFFFFF;
+  mix-blend-mode: normal;
+  opacity: 0.05;
+    border-radius:50%;
+
+
+}
+
 
 /*RULES SECTION */
 
