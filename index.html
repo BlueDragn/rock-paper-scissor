@@ -9,6 +9,7 @@
   </head>
 
   <body>
+
      <div class="container-0">
 
       <div class="container-1">
@@ -28,49 +29,52 @@
         </div>
       </div>
 
-
-
+<!--Main Container-->
+      <div class="container-main" id="container-main">
       <div class="container-2">
 
         <div class="triangle">
-          <embed src="images/bg-triangle.svg"  />
+          <embed src="images/bg-triangle.svg" />
         </div>
 
 
 
 
 
-<!-- rock container fist -->
 
-        <div class="rock-container">
+
+
+<!--rock container-->
+        <button class="rock-container" id="rock" onclick="myFunction()">
           <div class="rock" >
             <embed src="images/icon-rock.svg"  class="fist" />
            </div>
-        </div>
+        </button>
+
         <div  class="hide" > </div>
 
+<!---paper container-->
 
-<!--paper container-->
-
-        <div class="paper-container">
+        <button class="paper-container" id="paper" onclick="myFunction()">
           <div class="paper">
             <embed src="images/icon-paper.svg" />
 
           </div>
-        </div>
+        </button>
         <div  class="hide"> </div>
 
-<!--Scissor container-->
-        <div class="scissors-container">
+<!--Scissor container -->
+        <button class="scissors-container" id="scissors" onclick="myFunction()">
           <div class="scissors">
             <embed src="images/icon-scissors.svg" />
 
           </div>
-        </div>
+        </button>
         <div class="hide"> </div>
+      </div>
 
 
-<!-- Rules Section-->
+<!-- Rules Section
 
 
       <div class="container-3">
@@ -79,8 +83,54 @@
 
 
       </div>
+    -->
+
+<!------------------ SELECTION section ---------->
+<div class="selection" id="selection">
+  <div class="your-sel">
+
+    <p class="p1" id="p1">YOU SELECT</p>
+    <button class="rock-container-1" id="rock" >
+      <div class="rock" >
+        <embed src="images/icon-rock.svg"  class="fist" />
+       </div>
+    </button>
+
+  </div>
+
+  <div class="house-sel">
+    <P class="p2" id="p2"></P>
+
+    <button class="paper-container-1" id="paper" >
+      <div class="paper">
+        <embed src="images/icon-paper.svg" />
+
+      </div>
+    </button>
+
+  </div>
+
+</div>
 
 
 
+
+
+
+
+
+<!--- Script -->
+<script>
+function myFunction() {
+  var x = document.getElementById("container-main");
+  if (x.style.display === "none") {
+    x.style.display = "flex";
+  } else {
+    x.style.display = "none";
+  }
+  document.getElementById("p1").innerHTML = "YOU SELECT";
+}
+
+</script>
   </body>
   </html>

@@ -112,4 +112,16 @@ function game(playerChoice, computerChoice) {
 
 
 
+const container = getElementById('container-main');
 
+// Event handling
+const x = document.getElementById("rock");
+
+function myFunction() {
+  var x = document.getElementById("container-main");
+  if (x.style.display === "none") {
+    x.style.display = "flex";
+  } else {
+    x.style.display = "none";
+  }
+}

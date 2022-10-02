@@ -229,7 +229,7 @@ mix-blend-mode: normal;
   mix-blend-mode: normal;
   opacity: 0.05;
     border-radius:50%;
-    cursor: pointer;
+
 
 }
 
@@ -297,8 +297,8 @@ mix-blend-mode: normal;
   mix-blend-mode: normal;
   opacity: 0.05;
   border-radius:50%;
-  cursor: pointer;
- 
+
+
 
 }
 
@@ -388,4 +388,125 @@ mix-blend-mode: normal;
 .container-3 > p{
   color: #ffffff;
   text-align: center;
+}
+
+
+/**  Selection Section    **/
+.selection{
+  width: 900px;
+  height: 500px;
+
+  display: none;
+}
+.your-sel{
+  width: 50%;
+  height: 100%;
+ background-color: #EB9F0E;
+
+
+
+}
+.house-sel{
+  width: 50%;
+  height: 100%;
+background-color: #DB2E4D;
+}
+.p1{
+
+  margin-left: 150px;
+  margin-top: 20px;
+
+  font-family: 'Barlow Semi Condensed';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  /* identical to box height, or 133% */
+
+  letter-spacing: 3px;
+
+  color: #FFFFFF;
+
+  text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
+}
+.p2{
+
+  margin-left: 100px;
+  margin-top: 20px;
+
+  font-family: 'Barlow Semi Condensed';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  /* identical to box height, or 133% */
+
+  letter-spacing: 3px;
+
+  color: #FFFFFF;
+
+  text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
+}
+.rock-container-1{
+  background-color:#DB2E4D;
+  width:200px;
+  height:200px;
+
+  /* border properties*/
+  border-radius:50%;
+
+  /*Box Shadow Property */
+  box-shadow: 0px 15px 7px  #9D1634;
+
+  /* Positioning*/
+
+  display:flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-left: 25%;
+  margin-top: 25%;
+
+}
+
+.paper-container-1{
+
+  background-color:#4664F4;
+    width:200px;
+    height:200px;
+
+    /* border properties*/
+    border-radius:50%;
+
+    /*Box Shadow Property */
+    box-shadow: 0px 15px 7px #2A45C2;
+
+    /* Positioning*/
+
+    margin-left: 25%;
+    margin-top: 25%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.scissors-container-1{
+
+  background-color:#EB9F0E;
+    width:200px;
+    height:200px;
+
+    /* border properties*/
+    border-radius:50%;
+
+    /*Box Shadow Property */
+    box-shadow: 0px 15px 7px #C76C1B;
+
+    /* Positioning*/
+
+    margin-left: 25%;
+    margin-top: 25%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
