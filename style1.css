@@ -112,18 +112,24 @@ h6 {
 .playground{
 width: 313.63px;
 height: 281.34px;
-border: 1px solid white;
+/* border: 1px solid white; */
 margin-left: 30px;
 margin-right: 31.37px;
 margin-top: 105px;
-}
-.triangle{
-    width: 166px;
-    height: 188px;
-    /* margin-top: 65px;
-    margin-left: 65px;
-    margin-right:60px ;
-    margin-bottom:50px ; */
-    padding-top: 60px;
+/* padding: 10px; */
+background-image: url(./images/bg-triangle.svg);
+background-repeat: no-repeat;
+background-size: 166px 188px;
+background-position: 80px 50px ;
 
+}
+.options{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: center;
+}
+.scissor{
+    align-self: center;
+    margin-left: 85px;
 }
