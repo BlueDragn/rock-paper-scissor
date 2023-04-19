@@ -97,6 +97,7 @@ h6 {
   margin-right: 12px;
   text-align: center;
   padding: 5px;
+  border-radius: 5px;
 }
 .score > p {
   font-weight: 700;
@@ -129,7 +130,16 @@ flex-wrap: wrap;
 justify-content: space-between;
 align-items: center;
 }
-.scissor{
+ .rock{
     align-self: center;
     margin-left: 85px;
+}
+.scissor:hover{
+  cursor: pointer;
+}
+.paper:hover{
+cursor: pointer;
+}
+.rock:hover{
+  cursor: pointer;
 }
