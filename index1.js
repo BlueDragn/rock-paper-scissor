@@ -1,9 +1,13 @@
 //Initializing Global variable
 let playerSelection = "";
 
+// Getting element from html
+let rock = document.getElementById("rock");
+let Paper = document.getElementById("paper");
+let scissors = document.getElementById("scissor");
 //Computer's Move
 function getComputerChoice() {
-  let arrayInput = ["rock", "paper", "scissors"];
+  let arrayInput = ["rock", "paper", "scissors"]; // have to put image id as option
   let arraylength = arrayInput.length;
   let x = Math.floor(Math.random() * arraylength);
   let computerSelection = arrayInput[x];
@@ -45,7 +49,7 @@ function playround() {
   let result = "";
   for (let index = 0; index < maxRound; index++) {
     //player Choice
-    playerSelection = prompt("Please enter your option", "rock");
+    playerSelection = prompt("Please enter your option", "rock");//have to replace it with image id as option
     let playerSelection1 = playerSelection.toLowerCase();
     console.log("yourChoice:" + playerSelection1);
 
@@ -78,20 +82,23 @@ function playround() {
 
 playround();
 
-// const container = getElementById("container-main");
-
-// // Event handling
-// const x = document.getElementById("rock");
-
-// function myFunction() {
-//   var x = document.getElementById("container-main");
-//   if (x.style.display === "none") {
-//     x.style.display = "flex";
-//   } else {
-//     x.style.display = "none";
-//   }
-// }
-
 
 // 1.Show the score in ScoreBoard Section > class = num means have to show playerScore in score section
 // 2. Player can select options  by clicking on one of the three image of play ground section
+// when user clicked on image it should be selected as an option
+
+
+const imageContainers = document.querySelectorAll(".image-container");
+
+imageContainers.forEach(container => {
+  const image = container.querySelector("img");
+  container.addEventListener("click", function() {
+    // Remove the clicked class from all images
+    imageContainers.forEach(container => container.classList.remove("clicked"));
+    // Add the clicked class to the clicked image
+    container.classList.add("clicked");
+    playGame(image.alt);
+  });
+});
+
+
