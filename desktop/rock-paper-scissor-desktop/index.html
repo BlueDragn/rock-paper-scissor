@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed&display=swap" rel="stylesheet" /> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!------Main container or Section will contain whole page -->
+    <section id="main" class="main">
+      <!-----Scoreboard Section which contain game name and score info -->
+      <section id="Scoreboard" class="scoreboard">
+        <!----Logo ------>
+        <div class="logo">
+          <img src="./assests/images/logo.svg" />
+        </div>
+        <!------Score---->
+        <div class="score-container">
+          <div class="score">
+            <h3>SCORE</h3>
+            <p>12</p>
+          </div>
+        </div>
+      </section>
+      <!-----Play Ground Section where player will choose his options to play the game ---->
+      <section id="playground" class="playground">
+        <div class="hands">
+          <!------- Paper-------->
+
+          <button class="btn" id="paper">
+            <div class="paper-container">
+              <img src="assests/images/paper.png" />
+            </div>
+          </button>
+
+          <!----------Scissor -------->
+          <button class="btn" id="scissor" >
+            <img src="/assests/images/scissor.png" />
+          </button>
+          <!-----------Rock ----------->
+          <button class="btn" id="rock">
+            <img src="/assests/images/rock.png" />
+          </button>
+        </div>
+      </section>
+      <!-----Footer Section ------>
+      <footer></footer>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
