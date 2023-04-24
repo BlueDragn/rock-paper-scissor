@@ -27,12 +27,13 @@
         <div class="score-container">
           <div class="score">
             <h3>SCORE</h3>
-            <p>12</p>
+            <p id="score">0</p>
           </div>
         </div>
       </section>
+      <!-- style="display: none" -->
       <!-----Play Ground Section where player will choose his options to play the game ---->
-      <section id="playground" class="playground">
+      <section id="playground" class="playground" >
         <div class="hands">
           <!------- Paper-------->
 
@@ -43,17 +44,33 @@
           </button>
 
           <!----------Scissor -------->
-          <button class="btn" id="scissor" >
-            <img src="/assests/images/scissor.png" />
+          <button class="btn" id="scissor">
+            <img src="assests/images/scissor.png" />
           </button>
           <!-----------Rock ----------->
           <button class="btn" id="rock">
-            <img src="/assests/images/rock.png" />
+            <img src="assests/images/rock.png" />
           </button>
         </div>
+
+        <!-- ---Footer Section ----
+        <footer></footer> -->
       </section>
-      <!-----Footer Section ------>
-      <footer></footer>
+      <!--------Selection Display Section  -->
+      <!-----This Section  will be displayed after user selection-->
+
+      <section class="selections">
+        <div class="user-selection">
+          <p>You selected</p>
+          <img src="" id="user-selection">
+        </div>
+        <div class="computer-selection">
+          <p>Computer selected</p>
+          <img src="" id="computer-selection">
+        </div>
+
+
+      </section>
     </section>
     <script src="script.js"></script>
   </body>

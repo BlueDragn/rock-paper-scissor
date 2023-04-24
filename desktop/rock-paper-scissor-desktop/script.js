@@ -3,6 +3,9 @@ let playerScore = 0;
 let computerScore = 0;
 let roundsPlayed = 0;
 
+var finalScore = document.getElementById("score");
+
+
 // Get a reference to the "rock" button
 var rock = document.getElementById("rock");
 // Add a click event listener to the "paper" button
@@ -27,6 +30,11 @@ scissor.addEventListener("click", function () {
 
 // This function will be called when the user clicks on one of the buttons
 function handleSelection(selection) {
+    // Hide the current section
+    var playgroundSection = document.getElementById("playground");
+    playgroundSection.style.display = "none";
+
+
     console.log("user :"+ selection);
   // Generate a random selection for the computer
   var computerSelection = getComputerChoice();
@@ -34,7 +42,7 @@ function handleSelection(selection) {
 
   // Determine the outcome of the game based on the user's and computer's selections
   var outcome = determineOutcome(selection, computerSelection);
-  console.log("Round :" + roundsPlayed + outcome)
+
 
   // Update the game state to reflect the user's selection and the outcome of the game
   updateGameState(selection, computerSelection, outcome);
@@ -44,7 +52,8 @@ function handleSelection(selection) {
   console.log("round :" + roundsPlayed)
   if (roundsPlayed === 5) {
     // Display the final score
-    alert("Final Score: " + (playerScore - computerScore));
+    alert("Final Score: " + (playerScore , computerScore));
+    finalScore.innerHTML = playerScore;
 
     // Reset the game score and rounds played
     playerScore = 0;
@@ -79,26 +88,34 @@ function determineOutcome(playerChoice, computerChoice) {
   } else if (playerChoice === "scissors" && computerChoice === "rock") {
     winner = "computer";
   } else {
-    console.log("enter correct option");
+    // console.log("enter correct option");
   }
 //   console.log(winner);
   return winner;
 }
 // This function updates the game state to reflect the user's selection and the outcome of the game
-function updateGameState(userSelection, computerSelection1, outcome) {
+function updateGameState(userSelection, computerSelection, outcome) {
   // Update the UI to display the user's and computer's selections
-  console.log(userSelection);
+    // Get references to the user and computer selection elements
+    var userSelectionEl = document.getElementById("user-selection");
+    var computerSelectionEl = document.getElementById("computer-selection");
+  
+    // Set the src attribute of the user and computer selection images based on the selections
+    userSelectionEl.src = "assests/images/" + userSelection + ".png";
+    computerSelectionEl.src = "assests/images/" + computerSelection + ".png";
+  // console.log(userSelection);
   // Update the UI to display the outcome of the game
-  console.log(computerSelection1);
+  // console.log(computerSelection);
   // Update the game score based on the outcome of the game
   if (outcome === "Draw") {
     // Do nothing
-  } else if (outcome === "Player") {
-    playerScore++;
-  } else {
+  } else if (outcome === "computer") {
     computerScore++;
+  } else {
+    playerScore++;
   }
   console.log("playerScore :" + playerScore)
   console.log("computerScore :" + computerScore)
+  finalScore.innerHTML = playerScore;
 }
 
