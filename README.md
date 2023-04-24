@@ -1,6 +1,6 @@
 # Rock, Paper, Scissors
 
-![Design preview for the Single-page developer portfolio coding challenge](./images/desktop-preview.jpg)
+![Design preview for the Single-page developer portfolio coding challenge](/assests/images/desktop-preview.jpg)
 ## Welcome! 👋
 
 
