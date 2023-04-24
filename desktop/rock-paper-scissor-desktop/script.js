@@ -1,10 +1,9 @@
 // Set the initial game score
 let playerScore = 0;
 let computerScore = 0;
-let roundsPlayed = 0;
+
 
 var finalScore = document.getElementById("score");
-
 
 // Get a reference to the "rock" button
 var rock = document.getElementById("rock");
@@ -16,59 +15,65 @@ rock.addEventListener("click", function () {
 
 // Get a reference to the "paper" button
 var paper = document.getElementById("paper");
-// Add a click event listener to the "scissor" button
 paper.addEventListener("click", function () {
   handleSelection("paper");
 });
 
 // Get a reference to the "scissor" button
 var scissor = document.getElementById("scissor");
-// Add a click event listener to the "scissor" button
 scissor.addEventListener("click", function () {
   handleSelection("scissor");
 });
 
+// Get a reference to the "play again" button
+var playAgain = document.getElementById("play-again");
+playAgain.addEventListener("click", function () {
+   // Reset player and computer scores
+   playerScore = 0;
+   computerScore = 0;
+ 
+   // Update the UI to display the initial scores
+   var playerScoreEl = document.getElementById("player-score");
+   playerScoreEl.innerHTML = playerScore;
+ 
+   var computerScoreEl = document.getElementById("computer-score");
+   computerScoreEl.innerHTML = computerScore;
+ 
+   // Remove the result section
+   var resultSection = document.getElementById("result-section");
+   resultSection.style.display = "none";
+ 
+   // Show the playground section
+   var playgroundSection = document.getElementById("playground");
+   playgroundSection.style.display = "flex";
+
+});
+
+
+
 // This function will be called when the user clicks on one of the buttons
 function handleSelection(selection) {
-    // Hide the current section
-    var playgroundSection = document.getElementById("playground");
-    playgroundSection.style.display = "none";
+  // Hide the current section
+  var playgroundSection = document.getElementById("playground");
+  playgroundSection.style.display = "none";
+  var x = document.getElementById("selections");
+  x.style.display = "flex";
 
-
-    console.log("user :"+ selection);
-  // Generate a random selection for the computer
-  var computerSelection = getComputerChoice();
-  console.log("Computer :" + computerSelection);
+// Generate a random selection for the computer
+var computerSelection = getComputerChoice();
+console.log("Computer :" + computerSelection);
 
   // Determine the outcome of the game based on the user's and computer's selections
   var outcome = determineOutcome(selection, computerSelection);
 
-
   // Update the game state to reflect the user's selection and the outcome of the game
   updateGameState(selection, computerSelection, outcome);
 
-  // Check if the game has ended after 5 rounds
-  roundsPlayed++;
-  console.log("round :" + roundsPlayed)
-  if (roundsPlayed === 5) {
-    // Display the final score
-    alert("Final Score: " + (playerScore , computerScore));
-    finalScore.innerHTML = playerScore;
-
-    // Reset the game score and rounds played
-    playerScore = 0;
-    computerScore = 0;
-    roundsPlayed = 0;
-  }
+  // // Update the UI to display the game score
+  // updateScore();
 }
-// This function generates a random selection for the computer
-function getComputerChoice() {
-    let arrayInput = ["rock", "paper", "scissors"];
-    let arraylength = arrayInput.length;
-    let x = Math.floor(Math.random() * arraylength);
-    let computerChoice = arrayInput[x];
-    return computerChoice;
-  }
+
+
 
 //Function To decide the winner
 function determineOutcome(playerChoice, computerChoice) {
@@ -79,43 +84,60 @@ function determineOutcome(playerChoice, computerChoice) {
     winner = "computer";
   } else if (playerChoice === "paper" && computerChoice === "rock") {
     winner = "player";
-  } else if (playerChoice === "paper" && computerChoice === "scissors") {
+  } else if (playerChoice === "paper" && computerChoice === "scissor") {
     winner = "computer";
-  } else if (playerChoice === "scissors" && computerChoice === "paper") {
+  } else if (playerChoice === "scissor" && computerChoice === "paper") {
     winner = "player";
-  } else if (playerChoice === "rock" && computerChoice === "scissors") {
+  } else if (playerChoice === "rock" && computerChoice === "scissor") {
     winner = "player";
-  } else if (playerChoice === "scissors" && computerChoice === "rock") {
+  } else if (playerChoice === "scissor" && computerChoice === "rock") {
     winner = "computer";
   } else {
     // console.log("enter correct option");
   }
-//   console.log(winner);
+  //   console.log(winner);
   return winner;
 }
-// This function updates the game state to reflect the user's selection and the outcome of the game
-function updateGameState(userSelection, computerSelection, outcome) {
-  // Update the UI to display the user's and computer's selections
-    // Get references to the user and computer selection elements
-    var userSelectionEl = document.getElementById("user-selection");
-    var computerSelectionEl = document.getElementById("computer-selection");
-  
-    // Set the src attribute of the user and computer selection images based on the selections
-    userSelectionEl.src = "assests/images/" + userSelection + ".png";
-    computerSelectionEl.src = "assests/images/" + computerSelection + ".png";
-  // console.log(userSelection);
-  // Update the UI to display the outcome of the game
-  // console.log(computerSelection);
-  // Update the game score based on the outcome of the game
-  if (outcome === "Draw") {
-    // Do nothing
-  } else if (outcome === "computer") {
-    computerScore++;
-  } else {
-    playerScore++;
-  }
-  console.log("playerScore :" + playerScore)
-  console.log("computerScore :" + computerScore)
-  finalScore.innerHTML = playerScore;
+// This function generates a random selection for the computer
+function getComputerChoice() {
+  let arrayInput = ["rock", "paper", "scissor"];
+  let arraylength = arrayInput.length;
+  let x = Math.floor(Math.random() * arraylength);
+  let computerChoice = arrayInput[x];
+  return computerChoice;
 }
+
+function updateGameState(userSelection, computerSelection, outcome) {
+  // Update the UI to display the user's selection
+  var userSelectionEl = document.getElementById("user-selection");
+  userSelectionEl.src = "assests/images/" + userSelection + ".png";
+
+  // Delay for 1 second before displaying the computer's selection
+  setTimeout(function() {
+    // Update the UI to display the computer's selection
+    var computerSelectionEl = document.getElementById("computer-selection");
+    computerSelectionEl.src = "assests/images/" + computerSelection + ".png";
+
+    // Update the UI to display the outcome of the game
+    var resultEl = document.getElementById("result");
+    if (outcome === "Draw") {
+      resultEl.innerHTML = "It's a draw!";
+    } else if (outcome === "Computer") {
+      playerScore--;
+      resultEl.innerHTML = "You lose!";
+    } else {
+      playerScore++;
+      resultEl.innerHTML = "You win!";
+    }
+
+    // Update the UI to display the current scores
+    var playerScoreEl = document.getElementById("player-score");
+    playerScoreEl.innerHTML = playerScore;
+
+    var computerScoreEl = document.getElementById("computer-score");
+    computerScoreEl.innerHTML = computerScore;
+  }, 1000); // Delay for 1 second (1000 milliseconds)
+}
+
+
 

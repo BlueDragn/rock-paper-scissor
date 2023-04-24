@@ -31,9 +31,9 @@
           </div>
         </div>
       </section>
-      <!-- style="display: none" -->
+      <!--  -->
       <!-----Play Ground Section where player will choose his options to play the game ---->
-      <section id="playground" class="playground" >
+      <section id="playground" class="playground"  >
         <div class="hands">
           <!------- Paper-------->
 
@@ -59,11 +59,17 @@
       <!--------Selection Display Section  -->
       <!-----This Section  will be displayed after user selection-->
 
-      <section class="selections">
+      <section class="selections" id="selections"  style="display: none;">
         <div class="user-selection">
           <p>You selected</p>
           <img src="" id="user-selection">
         </div>
+        <!---Result Display -->
+     <div class="result">
+     <h3 id="result"></h3>
+     <button id="play-again">PLAY AGAIN</button>
+     </div>
+
         <div class="computer-selection">
           <p>Computer selected</p>
           <img src="" id="computer-selection">

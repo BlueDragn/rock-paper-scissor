@@ -60,8 +60,8 @@ h6 {
 
 /******Main Container ****/
 .main {
-  max-width: 1366px;
-  min-height: 800px;
+  /* max-width: 1366px;
+  min-height: 800px; */
 
   border: 1px solid whitesmoke;
   margin: 0 auto;
@@ -157,8 +157,10 @@ h6 {
 
 .selections {
   border: 1px solid white;
-  width: 700px;
-  height: 400px;
+  /* width: 700px; */
+  width: auto;
+  /* height: 400px; */
+  height: auto;
   display: flex;
   justify-content: space-between;
 }
@@ -189,4 +191,39 @@ h6 {
 }
 .selections img{
   margin-left: 32px;
+}
+
+/*** winner_Looser  Declaration Result**/
+.result h3{
+  font-family: 'Barlow Semi Condensed';
+font-style: normal;
+font-weight: 700;
+font-size: 50px;
+line-height: 67px;
+text-align: center;
+
+color: #FFFFFF;
+
+text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
+
+margin-bottom: 10px;
+margin-top: 100px;
+}
+/*** Play_Again Button ***/
+#play-again{
+
+  height: 48px;
+  width: 200px;
+
+border-radius: 0px;
+
+font-family: 'Barlow Semi Condensed';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 19px;
+letter-spacing: 2.5px;
+
+color: #3B4262;
+
 }
