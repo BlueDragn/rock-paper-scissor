@@ -60,8 +60,8 @@ h6 {
 
 /******Main Container ****/
 .main {
-  /* max-width: 1366px;
-  min-height: 800px; */
+  max-width: 1366px;
+  min-height: 800px;
 
   /* border: 1px solid whitesmoke; */
   margin: 0 auto;
@@ -189,41 +189,87 @@ h6 {
   text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
   text-align: center;
 }
-.selections img{
+.selections img {
   margin-left: 32px;
 }
 
 /*** winner_Looser  Declaration Result**/
-.result h3{
-  font-family: 'Barlow Semi Condensed';
-font-style: normal;
-font-weight: 700;
-font-size: 50px;
-line-height: 67px;
-text-align: center;
+.result h3 {
+  font-family: "Barlow Semi Condensed";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 67px;
+  text-align: center;
 
-color: #FFFFFF;
+  color: #ffffff;
 
-text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
+  text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
 
-margin-bottom: 10px;
-margin-top: 100px;
+  margin-bottom: 10px;
+  margin-top: 100px;
 }
 /*** Play_Again Button ***/
-#play-again{
-
+#play-again {
   height: 48px;
   width: 200px;
 
-border-radius: 0px;
+  border-radius: 0px;
+
+  font-family: "Barlow Semi Condensed";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2.5px;
+
+  color: #3b4262;
+}
+
+/*Ripple effect around result button  */
+/*Rules  footer*/
+
+.footer{
+  position: absolute;
+  left: 90%;
+  top: 90%;
+}
+
+.rules{
+width: 128px;
+height: 40px;
 
 font-family: 'Barlow Semi Condensed';
 font-style: normal;
 font-weight: 600;
 font-size: 16px;
 line-height: 19px;
+text-align: center;
 letter-spacing: 2.5px;
 
-color: #3B4262;
+color: #FFFFFF;
+background-color: var(--dark-text);
+border-radius: 10px;
+}
 
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background-color: #FFFFFF;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  display: none;
+}
+
+.popup img {
+  max-width: 100%;
+  height: auto;
+}
+
+.popup.active {
+  display: block;
 }

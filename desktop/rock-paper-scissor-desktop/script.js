@@ -2,9 +2,6 @@
 let playerScore = 0;
 let computerScore = 0;
 
-
-
-
 // Get a reference to the "rock" button
 var rock = document.getElementById("rock");
 // Add a click event listener to the "paper" button
@@ -28,19 +25,14 @@ scissor.addEventListener("click", function () {
 // Get a reference to the "play again" button
 var playAgain = document.getElementById("play-again");
 playAgain.addEventListener("click", function () {
+  // Remove the result section
+  var resultSection = document.getElementById("selections");
+  resultSection.style.display = "none";
 
-   // Remove the result section
-   var resultSection = document.getElementById("selections");
-   resultSection.style.display = "none";
-
-
-   // Show the playground section
-   var playgroundSection = document.getElementById("playground");
-   playgroundSection.style.display = "flex";
-
+  // Show the playground section
+  var playgroundSection = document.getElementById("playground");
+  playgroundSection.style.display = "flex";
 });
-
-
 
 // This function will be called when the user clicks on one of the buttons
 function handleSelection(selection) {
@@ -51,21 +43,29 @@ function handleSelection(selection) {
   var x = document.getElementById("selections");
   x.style.display = "flex";
 
-// Generate a random selection for the computer
-var computerSelection = getComputerChoice();
-console.log("Computer :" + computerSelection);
+  // Reset the UI elements before displaying the user's and computer's selections and the outcome of the game
+  var userSelectionEl = document.getElementById("user-selection");
+  userSelectionEl.src = "";
+  var computerSelectionEl = document.getElementById("computer-selection");
+  computerSelectionEl.src = "";
+  var resultEl = document.getElementById("result");
+  resultEl.innerHTML = "";
+
+  // Generate a random selection for the computer
+  var computerSelection = getComputerChoice();
+  console.log("Computer :" + computerSelection);
 
   // Determine the outcome of the game based on the user's and computer's selections
   var outcome = determineOutcome(selection, computerSelection);
 
   // Update the game state to reflect the user's selection and the outcome of the game
   updateGameState(selection, computerSelection, outcome);
+  var playAgain = document.getElementById("play-again");
+  playAgain.style.display = "none";
 
   // // Update the UI to display the game score
   // updateScore();
 }
-
-
 
 //Function To decide the winner
 function determineOutcome(playerChoice, computerChoice) {
@@ -105,32 +105,52 @@ function updateGameState(userSelection, computerSelection, outcome) {
   userSelectionEl.src = "assests/images/" + userSelection + ".png";
 
   // Delay for 1 second before displaying the computer's selection
-  setTimeout(function() {
+  setTimeout(function () {
     // Update the UI to display the computer's selection
     var computerSelectionEl = document.getElementById("computer-selection");
     computerSelectionEl.src = "assests/images/" + computerSelection + ".png";
 
-    // Update the UI to display the outcome of the game
-    var resultEl = document.getElementById("result");
-    if (outcome === "Draw") {
-      resultEl.innerHTML = "It's a draw!";
-      playAgain.style.display = "block";
-    } else if (outcome === "computer") {
-      playerScore--;
-      resultEl.innerHTML = "You lose!";
-      playAgain.style.display = "block";
-    } else if(outcome === "player") {
-      playerScore++;
-      resultEl.innerHTML = "You win!";
-      playAgain.style.display = "block";
-    }
+    // Delay for 1 second before displaying the outcome of the game
+    setTimeout(function () {
+      // Update the UI to display the outcome of the game
+      var resultEl = document.getElementById("result");
+      // resultEl.innerHTML = ""; // Clear the previous result
+      if (outcome === "Draw") {
+        resultEl.innerHTML = "It's a draw!";
+        // playAgain.style.display = "block";
+      } else if (outcome === "computer") {
+        playerScore--;
+        resultEl.innerHTML = "You lose!";
+        // playAgain.style.display = "block";
+      } else if (outcome === "player") {
+        playerScore++;
+        resultEl.innerHTML = "You win!";
+        // playAgain.style.display = "block";
+      }
 
-    // Update the UI to display the current scores
-    var playerScoreEl = document.getElementById("score");
-    playerScoreEl.innerHTML = playerScore;
+      // Update the UI to display the current scores
+      var playerScoreEl = document.getElementById("score");
+      playerScoreEl.innerHTML = playerScore;
 
-  }, 2000); // Delay for 1 second (1000 milliseconds)
+      // Show the "play again" button
+      var playAgain = document.getElementById("play-again");
+      playAgain.style.display = "block";
+    }, 1000); // Delay for 1 second (1000 milliseconds)
+  }, 1000); // Delay for 1 second (1000 milliseconds)
 }
 
 
 
+//This will popup the rules image
+const rulesButton = document.querySelector('.rules');
+const popup = document.querySelector('.popup');
+
+rulesButton.addEventListener('click', () => {
+  popup.classList.add('active');
+});
+
+document.addEventListener('click', (event) => {
+  if (!popup.contains(event.target) && !rulesButton.contains(event.target)) {
+    popup.classList.remove('active');
+  }
+});
