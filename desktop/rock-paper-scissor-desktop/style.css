@@ -63,7 +63,7 @@ h6 {
   /* max-width: 1366px;
   min-height: 800px; */
 
-  border: 1px solid whitesmoke;
+  /* border: 1px solid whitesmoke; */
   margin: 0 auto;
   /* flex Properties */
   display: flex;
@@ -123,7 +123,7 @@ h6 {
 .playground {
   width: 476px;
   height: 430px;
-  border: 1px solid rgb(42, 10, 160);
+  /* border: 1px solid rgb(42, 10, 160); */
 }
 /** hands **/
 .hands {
@@ -156,7 +156,7 @@ h6 {
 /***** Styling for Selection part ******/
 
 .selections {
-  border: 1px solid white;
+  /* border: 1px solid white; */
   /* width: 700px; */
   width: auto;
   /* height: 400px; */
@@ -165,12 +165,12 @@ h6 {
   justify-content: space-between;
 }
 .user-selection {
-  border: 1px solid white;
+  /* border: 1px solid white; */
   width: 293px;
   height: 395px;
 }
 .computer-selection {
-  border: 1px solid white;
+  /* border: 1px solid white; */
   width: 293px;
   height: 395px;
 }

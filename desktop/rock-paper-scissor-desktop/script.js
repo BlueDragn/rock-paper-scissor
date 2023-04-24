@@ -3,7 +3,7 @@ let playerScore = 0;
 let computerScore = 0;
 
 
-var finalScore = document.getElementById("score");
+
 
 // Get a reference to the "rock" button
 var rock = document.getElementById("rock");
@@ -28,21 +28,12 @@ scissor.addEventListener("click", function () {
 // Get a reference to the "play again" button
 var playAgain = document.getElementById("play-again");
 playAgain.addEventListener("click", function () {
-   // Reset player and computer scores
-   playerScore = 0;
-   computerScore = 0;
- 
-   // Update the UI to display the initial scores
-   var playerScoreEl = document.getElementById("player-score");
-   playerScoreEl.innerHTML = playerScore;
- 
-   var computerScoreEl = document.getElementById("computer-score");
-   computerScoreEl.innerHTML = computerScore;
- 
+
    // Remove the result section
-   var resultSection = document.getElementById("result-section");
+   var resultSection = document.getElementById("selections");
    resultSection.style.display = "none";
- 
+
+
    // Show the playground section
    var playgroundSection = document.getElementById("playground");
    playgroundSection.style.display = "flex";
@@ -56,6 +47,7 @@ function handleSelection(selection) {
   // Hide the current section
   var playgroundSection = document.getElementById("playground");
   playgroundSection.style.display = "none";
+
   var x = document.getElementById("selections");
   x.style.display = "flex";
 
@@ -122,21 +114,22 @@ function updateGameState(userSelection, computerSelection, outcome) {
     var resultEl = document.getElementById("result");
     if (outcome === "Draw") {
       resultEl.innerHTML = "It's a draw!";
-    } else if (outcome === "Computer") {
+      playAgain.style.display = "block";
+    } else if (outcome === "computer") {
       playerScore--;
       resultEl.innerHTML = "You lose!";
-    } else {
+      playAgain.style.display = "block";
+    } else if(outcome === "player") {
       playerScore++;
       resultEl.innerHTML = "You win!";
+      playAgain.style.display = "block";
     }
 
     // Update the UI to display the current scores
-    var playerScoreEl = document.getElementById("player-score");
+    var playerScoreEl = document.getElementById("score");
     playerScoreEl.innerHTML = playerScore;
 
-    var computerScoreEl = document.getElementById("computer-score");
-    computerScoreEl.innerHTML = computerScore;
-  }, 1000); // Delay for 1 second (1000 milliseconds)
+  }, 2000); // Delay for 1 second (1000 milliseconds)
 }
 
 
