@@ -1,10 +1,12 @@
 # Rock, Paper, Scissors
 
-![Design preview for the Single-page developer portfolio coding challenge](/assests/images/desktop-preview.jpg)
 ## Welcome! 👋
 
 
 This is a solution to the [Rock, Paper, Scissors challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH) and developed as part of [Chingu](https://www.chingu.io/) **Solo Project.**
+
+![Design preview for the Single-page developer portfolio coding challenge](/assests/images/desktop-preview.jpg)
+
 
 ## Table of contents
 
@@ -21,6 +23,14 @@ This is a solution to the [Rock, Paper, Scissors challenge on Frontend Mentor](h
 - [Acknowledgments](#acknowledgments)
 
 ## Overview
+
+
+This project is a JavaScript implementation of the popular game [rock-paper-scissors](https://en.wikipedia.org/wiki/Rock_paper_scissors). It was built as a part of the **[Chingu Solo Project](https://www.chingu.io/)** and [The Odin Project's](https://www.theodinproject.com/lessons/foundations-rock-paper-scissors) Foundation Course.
+The project's **UI** was created based on a **figma design** provided by [Frontend Mentors](https://www.frontendmentor.io/).<br>
+
+The game allows users to play against the computer, and includes features such as a scoring system, feedback after each round, and user input validation.<br>
+
+**Overall,** the project aims to provide a fun and engaging way to play rock-paper-scissors in a browser-based application, while also demonstrating proficiency in JavaScript and front-end web development.
 
 ### The challenge
 
