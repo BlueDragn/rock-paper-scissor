@@ -51,7 +51,9 @@ Users should be able to:
 - Live Site URL: [Play the game](https://bluedragn.github.io/rock-paper-scissor/)
 
 ## My process
-To develop this project, the **Agile project development** methodology was employed, resulting in the creation and deployment of a desktop game. The primary objective was to swiftly release a functioning game and subsequently assess its design before deploying the next version
+The **Agile project development** methodology was utilized to create and deploy a desktop game for this project. The primary objective was to quickly release a working game, followed by an assessment of its design before deploying the next version.
+
+In addition, **Git branches** were utilized during development, with a development branch utilized for continuous development and changes merged with the main branch.
 ### Built with
 - Semantic HTML5 markup
 - CSS Flexbox
