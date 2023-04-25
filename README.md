@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Solution](./assests/images/Screenshot%20from%202023-04-25%2009-30-10.png)
 
 Will add a screenshot of your solution.
 ### Links
