@@ -4,7 +4,7 @@
 ## Welcome! 👋
 
 
-This is a solution to the [Rock, Paper, Scissors challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is a solution to the [Rock, Paper, Scissors challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH) and developed as part of [Chingu](https://www.chingu.io/) **Solo Project.**
 
 ## Table of contents
 
@@ -19,8 +19,6 @@ This is a solution to the [Rock, Paper, Scissors challenge on Frontend Mentor](h
   - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -40,19 +38,23 @@ Users should be able to:
 Will add a screenshot of your solution.
 ### Links
 
-- Solution URL: [Coming Soon](https://your-solution-url.com)
-- Live Site URL: [Coming Soon](https://your-live-site-url.com)
+- Solution URL: [Git Repo](https://github.com/BlueDragn/rock-paper-scissor)
+- Live Site URL: [Play the game](https://bluedragn.github.io/rock-paper-scissor/)
 
 ## My process
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- Mobile-first workflow
+- CSS Flexbox
+- Desktop-first workflow
 - Vanilla Javascript
+
 ### What I learned
+- Javascript DOM, Function
+- Algorithm
+- CSS Flexbox
+- git branching
 
 ### Continued development
 
@@ -62,8 +64,8 @@ There is always room for Improvement...............
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Website - [Anshuman](https://github.com/BlueDragn)
+- Frontend Mentor - [@BlueDragn](https://www.frontendmentor.io/profile/BlueDragn)
 - Twitter - [@Ans___human](https://twitter.com/Ans___human)
 
 
