@@ -45,16 +45,14 @@ Users should be able to:
 
 ![Solution](./assests/images/Screenshot%20from%202023-04-25%2009-30-10.png)
 
-Will add a screenshot of your solution.
 ### Links
 
 - Solution URL: [Git Repo](https://github.com/BlueDragn/rock-paper-scissor)
 - Live Site URL: [Play the game](https://bluedragn.github.io/rock-paper-scissor/)
 
 ## My process
-
+To develop this project, the **Agile project development** methodology was employed, resulting in the creation and deployment of a desktop game. The primary objective was to swiftly release a functioning game and subsequently assess its design before deploying the next version
 ### Built with
-
 - Semantic HTML5 markup
 - CSS Flexbox
 - Desktop-first workflow
@@ -67,10 +65,17 @@ Will add a screenshot of your solution.
 - git branching
 
 ### Continued development
+As with any project, there is always room for improvement, and this game development project is no exception. Some potential areas for further development include:
+- Striving to make the game match the design as closely as possible, with a goal of achieving pixel-perfect precision.
+- Developing a mobile version of the game.
+- Incorporating personal touches to enhance the game's uniqueness.
+- Creating an advanced version of the game.
 
-There is always room for Improvement...............
 
 ### Useful resources
+- [Chingu](https://www.chingu.io/)
+- [Front End Mentors](https://www.frontendmentor.io/)
+- [The Odin Project](https://www.theodinproject.com/)
 
 ## Author
 
@@ -82,4 +87,4 @@ There is always room for Improvement...............
 
 ## Acknowledgments
 
-
+I would like to extend my thanks to Front End Mentors for providing the game UI used in this project. Their contribution was invaluable in bringing this game to life and enhancing its visual appeal.
